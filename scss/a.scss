@@ -147,6 +147,14 @@ main {
                         width: auto;
                         height: auto;
                     }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: black;
+                    }
                 }
 
                 .buildData {
@@ -156,6 +164,15 @@ main {
                         width: auto;
                         height: auto;
                     }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: black;
+                    }
+
                 }
 
                 .address {
@@ -165,6 +182,15 @@ main {
                         width: auto;
                         height: auto;
                     }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: black;
+                    }
+
                 }
 
                 .openingHours {
@@ -174,6 +200,15 @@ main {
                         width: auto;
                         height: auto;
                     }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: black;
+                    }
+
                 }
 
                 .tel {
@@ -183,15 +218,37 @@ main {
                         width: auto;
                         height: auto;
                     }
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: black;
+                    }
+
                 }
 
                 .serviceItems {
+                    display: flex;
+                    border-bottom: 1px solid black;
+                    padding-bottom: 50px;
+                    ul {
+                        display: inline;
+                        li {
+                            display: inline;
+                            list-style-type: none;
+                        }
+                    }
+
                     &::before {
                         content: '服務項目';
                         display: inline-block;
                         width: auto;
                         height: auto;
                     }
+
+               
                 }
             }
         }
