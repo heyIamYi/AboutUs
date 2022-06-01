@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+    body {
+        /* 先套用 Noto Sans TC 這個 思源黑體 */
+        font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    }
 }
 
 
@@ -11,12 +17,15 @@ main {
     #banner {
         width: 100%;
         min-height: 70vh;
-
+        position: relative;
+        padding-top: 300px;
+        padding-left: 15%;
         .tittle-en {
             color: #004098;
-            font-size: 80px;
-            font-weight: 700;
+            font-size: 68px;
+            font-weight: 300;
             letter-spacing: 0.18em;
+            line-height: 118px;
         }
 
         .tittle-ch {
@@ -30,26 +39,32 @@ main {
 
         .sup-bg {
             background-color: #ECF4FF;
-            width: 840px;
-            height: 376px;
+            width: 1064px;
+            height: 476px;
             z-index: -1;
             float: left;
+            position: absolute;
+            top: 33.3%;
+            left: 21%;
         }
 
         .banner-img {
-            width: 930px;
-            height: 518px;
+            width: 1178px;
+            min-width: 978px;
+            height: 656px;
             background-color: aquamarine;
             z-index: 0;
-        }
-
-        .page-list {
+            position: relative;
+            margin-left: auto;
+            .page-list {
             width: 160px;
             height: 164px;
             background-color: #004098;
             color: white;
             padding: 42px 36px 36px 49px;
-
+            position: absolute;
+            top: 50%;
+            left: -120px;
             ul {
                 font-weight: 500;
                 font-size: 15px;
@@ -61,6 +76,9 @@ main {
                 }
             }
         }
+        }
+
+        
     }
 
     // 經營理念
@@ -102,10 +120,9 @@ main {
     // 公司沿革
     #history {
         .content {
-            width: 100vw;
+            width: calc(100vw -17px);
 
             .card {
-                .date {}
 
                 display: flex;
                 width: 50%;
@@ -233,8 +250,10 @@ main {
                     display: flex;
                     border-bottom: 1px solid black;
                     padding-bottom: 50px;
+
                     ul {
                         display: inline;
+
                         li {
                             display: inline;
                             list-style-type: none;
@@ -248,7 +267,7 @@ main {
                         height: auto;
                     }
 
-               
+
                 }
             }
         }
