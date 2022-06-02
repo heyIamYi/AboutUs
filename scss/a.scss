@@ -16,16 +16,23 @@ main {
     // Banner大圖
     #banner {
         width: 100%;
-        min-height: 70vh;
+        height: 100%;
+        min-width: 1286px;
+        min-height: 642px;
         position: relative;
         padding-top: 300px;
-        padding-left: 15%;
+        padding-left: 500px;
+        margin-bottom: 100px;
         .tittle-en {
             color: #004098;
             font-size: 68px;
             font-weight: 300;
             letter-spacing: 0.18em;
             line-height: 118px;
+            position: absolute;
+            top: 270px;
+            left: 320px;
+            z-index: 3;
         }
 
         .tittle-ch {
@@ -33,8 +40,10 @@ main {
             font-size: 40px;
             line-height: 59px;
             color: #B4B4B4;
-            float: left;
             letter-spacing: 0.06em;
+            position: absolute;
+            top: 400px;
+            left: 320px;
         }
 
         .sup-bg {
@@ -42,47 +51,56 @@ main {
             width: 1064px;
             height: 476px;
             z-index: -1;
-            float: left;
             position: absolute;
             top: 33.3%;
             left: 21%;
         }
 
         .banner-img {
-            width: 1178px;
+            max-width: 1178px;
             min-width: 978px;
-            height: 656px;
-            background-color: aquamarine;
+            height: auto;
             z-index: 0;
             position: relative;
             margin-left: auto;
-            .page-list {
-            width: 160px;
-            height: 164px;
-            background-color: #004098;
-            color: white;
-            padding: 42px 36px 36px 49px;
-            position: absolute;
-            top: 50%;
-            left: -120px;
-            ul {
-                font-weight: 500;
-                font-size: 15px;
-                line-height: 22px;
-                list-style-type: none;
+            object-fit: contain;
+            margin-top: 100px;
+            .img {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 
-                li {
-                    margin-bottom: 16px;
+            .page-list {
+                width: 160px;
+                height: 164px;
+                background-color: #004098;
+                color: white;
+                padding: 42px 36px 36px 49px;
+                position: absolute;
+                top: 50%;
+                left: -120px;
+
+                ul {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 22px;
+                    list-style-type: none;
+
+                    li {
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
-        }
 
-        
+
     }
 
     // 經營理念
     #philosophy {
+        padding: 0 300px;
         .tittle {
             font-size: 30px;
             letter-spacing: 0.06em;
@@ -106,6 +124,7 @@ main {
 
     // 經營理念圖
     #philosophy-img {
+
         height: 65vh;
         display: flex;
         align-items: center;
@@ -119,15 +138,13 @@ main {
 
     // 公司沿革
     #history {
+        padding: 0 300px;
         .content {
             width: calc(100vw -17px);
-
             .card {
-
                 display: flex;
                 width: 50%;
                 flex-wrap: wrap;
-
                 &::after {
                     display: block;
                     content: '';
@@ -142,6 +159,7 @@ main {
 
     // 公司沿革圖
     #history-img {
+
         height: 65vh;
         display: flex;
         align-items: center;
@@ -155,6 +173,7 @@ main {
 
     // 公司簡介
     #companyProfile {
+        padding: 0 300px;
         .content {
             .card {
                 .companyName {
@@ -274,7 +293,17 @@ main {
     }
 
     // 公司地圖
-    #locationMap {}
+    #locationMap {
+        padding-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        iframe{
+            width: 70vw;
+            height: 400px;
+        }
+    }
 
 
 }
