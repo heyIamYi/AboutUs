@@ -1,0 +1,50 @@
+$themeColor:#004098;
+
+// 文字
+@mixin contentFont15 {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+// RWD響應式網站
+@mixin screen1700 {
+    @media (max-width:1700px) {
+        @content;
+    }
+}
+
+@mixin screen1600 {
+    @media (max-width:1600px) {
+        @content;
+    }
+}
+
+@mixin screen1500 {
+    @media (max-width:1500px) {
+        @content;
+    }
+}
+
+@mixin screen1440 {
+    @media (max-width:1440px) {
+        @content;
+    }
+}
+
+@mixin screen1200 {
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width:375px) {
+        @content;
+    }
+}

@@ -3,172 +3,191 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-* body {
-  /* 先套用 Noto Sans TC 這個 思源黑體 */
-  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+main #banner {
+  padding-left: 316px;
 }
 
-main #banner {
-  width: 100%;
-  height: 100%;
-  min-width: 1286px;
-  min-height: 642px;
-  position: relative;
-  padding-top: 300px;
-  padding-left: 600px;
-  margin-bottom: 100px;
+@media (max-width: 1600px) {
+  main #banner {
+    padding-left: 280px;
+  }
 }
 
 @media (max-width: 1440px) {
   main #banner {
-    padding-left: 580px;
+    padding-left: 153px;
   }
 }
 
-main #banner .tittle-en {
+@media (max-width: 768px) {
+  main #banner {
+    padding-left: 0;
+  }
+}
+
+main #banner .banner-container .sub-section {
+  position: relative;
+}
+
+main #banner .banner-container .sub-section .tittle-en {
   color: #004098;
   font-size: 68px;
   font-weight: 300;
   letter-spacing: 0.18em;
   line-height: 118px;
-  position: absolute;
-  top: 270px;
-  left: 320px;
   z-index: 3;
 }
 
-@media (max-width: 1440px) {
-  main #banner .tittle-en {
-    left: 280px;
+@media (max-width: 768px) {
+  main #banner .banner-container .sub-section .tittle-en {
+    position: absolute;
   }
 }
 
-main #banner .tittle-ch {
+main #banner .banner-container .sub-section .tittle-ch {
   font-weight: 500;
   font-size: 40px;
   line-height: 59px;
   color: #B4B4B4;
   letter-spacing: 0.06em;
-  position: absolute;
-  top: 400px;
-  left: 320px;
 }
 
-@media (max-width: 1440px) {
-  main #banner .tittle-ch {
-    left: 280px;
+@media (max-width: 768px) {
+  main #banner .banner-container .sub-section .tittle-ch {
+    position: absolute;
+    z-index: 3;
   }
 }
 
-main #banner .sup-bg {
-  width: 100%;
-  max-width: 1064px;
+main #banner .banner-container .sub-section .scroll-box {
   position: absolute;
-  height: 476px;
-  top: 330px;
-  left: 310px;
-  z-index: -1;
+  left: 0;
+  bottom: -250%;
 }
 
-@media (max-width: 1440px) {
-  main #banner .sup-bg {
-    left: 270px;
-  }
+main #banner .banner-container .sub-section .scroll-box .scroll-img {
+  width: 24px;
+  height: 100px;
+  margin-bottom: 30px;
 }
 
-main #banner .sup-bg .color-block {
-  background-color: #ebf3ff;
+main #banner .banner-container .sub-section .scroll-box .scroll-img img {
   width: 100%;
   height: 100%;
-  margin-left: 100px;
+}
+
+main #banner .banner-container .sub-section .scroll-box .scroll-text span {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  orientation: mixed;
+  color: #004098;
+}
+
+main #banner .banner-container .sub-section .sup-bg {
+  width: 1064px;
+  height: 476px;
+  z-index: -1;
+  position: absolute;
+  top: 68px;
+  left: 95px;
 }
 
 @media (max-width: 1600px) {
-  main #banner .sup-bg .color-block {
-    width: 987px;
-    height: 420px;
+  main #banner .banner-container .sub-section .sup-bg {
+    width: 950px;
+    height: 400px;
   }
 }
 
 @media (max-width: 1440px) {
-  main #banner .sup-bg .color-block {
+  main #banner .banner-container .sub-section .sup-bg {
     width: 840px;
     height: 376px;
   }
 }
 
-main #banner .banner-img {
-  max-width: 1178px;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  position: relative;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-left: auto;
-  margin-top: 100px;
-}
-
-main #banner .banner-img .img img {
+main #banner .banner-container .sub-section .sup-bg .color-block {
+  background-color: #ebf3ff;
   width: 100%;
   height: 100%;
 }
 
-main #banner .banner-img .page-list {
+main #banner .banner-container .main-section {
+  padding-left: 250px;
+}
+
+@media (max-width: 768px) {
+  main #banner .banner-container .main-section {
+    padding-left: 0;
+  }
+}
+
+main #banner .banner-container .main-section .banner-img {
+  max-width: 1178px;
+  min-width: 930px;
+  min-height: 518px;
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  main #banner .banner-container .main-section .banner-img {
+    max-width: unset;
+    min-width: 100vw;
+    min-height: unset;
+    margin-right: unset;
+    width: calc(100vw -17px);
+    height: 100vh;
+  }
+}
+
+main #banner .banner-container .main-section .banner-img .img img {
+  width: 100%;
+  height: 100%;
+}
+
+main #banner .banner-container .main-section .banner-img .page-list {
   width: 160px;
   height: 164px;
   background-color: #004098;
   color: white;
   padding: 42px 36px 36px 49px;
   position: absolute;
-  top: 33%;
+  top: calc(50% - 164px);
   left: -120px;
 }
 
-main #banner .banner-img .page-list ul {
+@media (max-width: 1700px) {
+  main #banner .banner-container .main-section .banner-img .page-list {
+    top: 40%;
+  }
+}
+
+@media (max-width: 1440px) {
+  main #banner .banner-container .main-section .banner-img .page-list {
+    top: 37%;
+  }
+}
+
+main #banner .banner-container .main-section .banner-img .page-list ul {
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
   list-style-type: none;
 }
 
-main #banner .banner-img .page-list ul li {
+main #banner .banner-container .main-section .banner-img .page-list ul li {
   margin-bottom: 16px;
-}
-
-main #banner .banner-img .scroll-box {
-  position: absolute;
-  left: -284px;
-  top: 40%;
-}
-
-@media (max-width: 1440px) {
-  main #banner .banner-img .scroll-box {
-    left: -300px;
-  }
-}
-
-main #banner .banner-img .scroll-box .scroll-img {
-  width: 24px;
-  height: 100px;
-  margin-bottom: 30px;
-}
-
-main #banner .banner-img .scroll-box .scroll-img img {
-  width: 100%;
-  height: 100%;
-}
-
-main #banner .banner-img .scroll-box .scroll-text span {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  orientation: mixed;
-  color: #004098;
 }
 
 main #philosophy {
