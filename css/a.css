@@ -14,10 +14,19 @@
 
 main #banner {
   width: 100%;
-  min-height: 70vh;
+  height: 100%;
+  min-width: 1286px;
+  min-height: 642px;
   position: relative;
   padding-top: 300px;
-  padding-left: 15%;
+  padding-left: 600px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1440px) {
+  main #banner {
+    padding-left: 580px;
+  }
 }
 
 main #banner .tittle-en {
@@ -26,6 +35,16 @@ main #banner .tittle-en {
   font-weight: 300;
   letter-spacing: 0.18em;
   line-height: 118px;
+  position: absolute;
+  top: 270px;
+  left: 320px;
+  z-index: 3;
+}
+
+@media (max-width: 1440px) {
+  main #banner .tittle-en {
+    left: 280px;
+  }
 }
 
 main #banner .tittle-ch {
@@ -33,29 +52,70 @@ main #banner .tittle-ch {
   font-size: 40px;
   line-height: 59px;
   color: #B4B4B4;
-  float: left;
   letter-spacing: 0.06em;
+  position: absolute;
+  top: 400px;
+  left: 320px;
+}
+
+@media (max-width: 1440px) {
+  main #banner .tittle-ch {
+    left: 280px;
+  }
 }
 
 main #banner .sup-bg {
-  background-color: #ECF4FF;
-  width: 1064px;
-  height: 476px;
-  z-index: -1;
-  float: left;
+  width: 100%;
+  max-width: 1064px;
   position: absolute;
-  top: 33.3%;
-  left: 21%;
+  height: 476px;
+  top: 330px;
+  left: 310px;
+  z-index: -1;
+}
+
+@media (max-width: 1440px) {
+  main #banner .sup-bg {
+    left: 270px;
+  }
+}
+
+main #banner .sup-bg .color-block {
+  background-color: #ebf3ff;
+  width: 100%;
+  height: 100%;
+  margin-left: 100px;
+}
+
+@media (max-width: 1600px) {
+  main #banner .sup-bg .color-block {
+    width: 987px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 1440px) {
+  main #banner .sup-bg .color-block {
+    width: 840px;
+    height: 376px;
+  }
 }
 
 main #banner .banner-img {
-  width: 1178px;
-  min-width: 978px;
-  height: 656px;
-  background-color: aquamarine;
+  max-width: 1178px;
+  width: auto;
+  height: auto;
   z-index: 0;
   position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-left: auto;
+  margin-top: 100px;
+}
+
+main #banner .banner-img .img img {
+  width: 100%;
+  height: 100%;
 }
 
 main #banner .banner-img .page-list {
@@ -65,7 +125,7 @@ main #banner .banner-img .page-list {
   color: white;
   padding: 42px 36px 36px 49px;
   position: absolute;
-  top: 50%;
+  top: 33%;
   left: -120px;
 }
 
@@ -78,6 +138,41 @@ main #banner .banner-img .page-list ul {
 
 main #banner .banner-img .page-list ul li {
   margin-bottom: 16px;
+}
+
+main #banner .banner-img .scroll-box {
+  position: absolute;
+  left: -284px;
+  top: 40%;
+}
+
+@media (max-width: 1440px) {
+  main #banner .banner-img .scroll-box {
+    left: -300px;
+  }
+}
+
+main #banner .banner-img .scroll-box .scroll-img {
+  width: 24px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+main #banner .banner-img .scroll-box .scroll-img img {
+  width: 100%;
+  height: 100%;
+}
+
+main #banner .banner-img .scroll-box .scroll-text span {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  orientation: mixed;
+  color: #004098;
+}
+
+main #philosophy {
+  padding: 0 300px;
 }
 
 main #philosophy .tittle {
@@ -111,6 +206,10 @@ main #philosophy-img .bg-color {
   width: 100%;
   height: 50%;
   background-color: #ECF4FF;
+}
+
+main #history {
+  padding: 0 300px;
 }
 
 main #history .content {
@@ -151,14 +250,18 @@ main #history-img .bg-color {
   background-color: #ECF4FF;
 }
 
-main #companyProfile .content .card .companyName::before {
+main #company-profile {
+  padding: 0 300px;
+}
+
+main #company-profile .content .card .company-name::before {
   content: '公司名稱';
   display: inline-block;
   width: auto;
   height: auto;
 }
 
-main #companyProfile .content .card .companyName::after {
+main #company-profile .content .card .company-name::after {
   content: '';
   display: block;
   width: 100%;
@@ -166,14 +269,14 @@ main #companyProfile .content .card .companyName::after {
   background-color: black;
 }
 
-main #companyProfile .content .card .buildData::before {
+main #company-profile .content .card .build-data::before {
   content: '設立時間';
   display: inline-block;
   width: auto;
   height: auto;
 }
 
-main #companyProfile .content .card .buildData::after {
+main #company-profile .content .card .build-data::after {
   content: '';
   display: block;
   width: 100%;
@@ -181,14 +284,14 @@ main #companyProfile .content .card .buildData::after {
   background-color: black;
 }
 
-main #companyProfile .content .card .address::before {
+main #company-profile .content .card .address::before {
   content: '地址';
   display: inline-block;
   width: auto;
   height: auto;
 }
 
-main #companyProfile .content .card .address::after {
+main #company-profile .content .card .address::after {
   content: '';
   display: block;
   width: 100%;
@@ -196,14 +299,14 @@ main #companyProfile .content .card .address::after {
   background-color: black;
 }
 
-main #companyProfile .content .card .openingHours::before {
+main #company-profile .content .card .opening-hours::before {
   content: '營業時間';
   display: inline-block;
   width: auto;
   height: auto;
 }
 
-main #companyProfile .content .card .openingHours::after {
+main #company-profile .content .card .opening-hours::after {
   content: '';
   display: block;
   width: 100%;
@@ -211,14 +314,14 @@ main #companyProfile .content .card .openingHours::after {
   background-color: black;
 }
 
-main #companyProfile .content .card .tel::before {
+main #company-profile .content .card .tel::before {
   content: '聯絡電話';
   display: inline-block;
   width: auto;
   height: auto;
 }
 
-main #companyProfile .content .card .tel::after {
+main #company-profile .content .card .tel::after {
   content: '';
   display: block;
   width: 100%;
@@ -226,7 +329,7 @@ main #companyProfile .content .card .tel::after {
   background-color: black;
 }
 
-main #companyProfile .content .card .serviceItems {
+main #company-profile .content .card .service-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,19 +337,38 @@ main #companyProfile .content .card .serviceItems {
   padding-bottom: 50px;
 }
 
-main #companyProfile .content .card .serviceItems ul {
+main #company-profile .content .card .service-items ul {
   display: inline;
 }
 
-main #companyProfile .content .card .serviceItems ul li {
+main #company-profile .content .card .service-items ul li {
   display: inline;
   list-style-type: none;
 }
 
-main #companyProfile .content .card .serviceItems::before {
+main #company-profile .content .card .service-items::before {
   content: '服務項目';
   display: inline-block;
   width: auto;
   height: auto;
+}
+
+main #location-map {
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+main #location-map iframe {
+  width: 70vw;
+  height: 400px;
 }
 /*# sourceMappingURL=a.css.map */

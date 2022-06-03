@@ -1,3 +1,27 @@
+@mixin screen1600 {
+    @media (max-width:1600px) {
+        @content;
+    }
+}
+
+@mixin screen1440 {
+    @media (max-width:1440px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width:375px) {
+        @content;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -16,16 +40,32 @@ main {
     // Banner大圖
     #banner {
         width: 100%;
-        min-height: 70vh;
+        height: 100%;
+        min-width: 1286px;
+        min-height: 642px;
         position: relative;
         padding-top: 300px;
-        padding-left: 15%;
+        padding-left: 600px;
+        margin-bottom: 100px;
+
+        @include screen1440 {
+            padding-left: 580px;
+        }
+
         .tittle-en {
             color: #004098;
             font-size: 68px;
             font-weight: 300;
             letter-spacing: 0.18em;
             line-height: 118px;
+            position: absolute;
+            top: 270px;
+            left: 320px;
+            z-index: 3;
+
+            @include screen1440 {
+                left: 280px;
+            }
         }
 
         .tittle-ch {
@@ -33,56 +73,127 @@ main {
             font-size: 40px;
             line-height: 59px;
             color: #B4B4B4;
-            float: left;
             letter-spacing: 0.06em;
+            position: absolute;
+            top: 400px;
+            left: 320px;
+
+            @include screen1440 {
+                left: 280px;
+            }
         }
 
         .sup-bg {
-            background-color: #ECF4FF;
-            width: 1064px;
+            width: 100%;
+            max-width: 1064px;
+            position: absolute;
             height: 476px;
+            top: 330px;
+            left: 310px;
             z-index: -1;
-            float: left;
-            position: absolute;
-            top: 33.3%;
-            left: 21%;
-        }
 
-        .banner-img {
-            width: 1178px;
-            min-width: 978px;
-            height: 656px;
-            background-color: aquamarine;
-            z-index: 0;
-            position: relative;
-            margin-left: auto;
-            .page-list {
-            width: 160px;
-            height: 164px;
-            background-color: #004098;
-            color: white;
-            padding: 42px 36px 36px 49px;
-            position: absolute;
-            top: 50%;
-            left: -120px;
-            ul {
-                font-weight: 500;
-                font-size: 15px;
-                line-height: 22px;
-                list-style-type: none;
+            @include screen1440 {
+                left: 270px;
+            }
 
-                li {
-                    margin-bottom: 16px;
+            .color-block {
+                background-color: hsl(215, 100%, 96%);
+                width: 100%;
+                height: 100%;
+                margin-left: 100px;
+
+                @include screen1600 {
+                    width: 987px;
+                    height: 420px;
+
+                }
+
+                @include screen1440 {
+                    width: 840px;
+                    height: 376px;
                 }
             }
         }
+
+        .banner-img {
+            max-width: 1178px;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            position: relative;
+            object-fit: contain;
+            margin-left: auto;
+            margin-top: 100px;
+
+            .img {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .page-list {
+                width: 160px;
+                height: 164px;
+                background-color: #004098;
+                color: white;
+                padding: 42px 36px 36px 49px;
+                position: absolute;
+                top: 33%;
+                left: -120px;
+
+                ul {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 22px;
+                    list-style-type: none;
+
+                    li {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
+
+            .scroll-box {
+                position: absolute;
+                left: -284px;
+                top: 40%;
+
+
+                @include screen1440{
+                    left: -300px;
+                }
+
+                .scroll-img {
+                    width: 24px;
+                    height: 100px;
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .scroll-text {
+                    span {
+                        writing-mode: vertical-lr;
+                        orientation: mixed;
+                        color: #004098;
+                    }
+                }
+            }
+
         }
 
-        
+
     }
 
     // 經營理念
     #philosophy {
+        padding: 0 300px;
+
         .tittle {
             font-size: 30px;
             letter-spacing: 0.06em;
@@ -106,6 +217,7 @@ main {
 
     // 經營理念圖
     #philosophy-img {
+
         height: 65vh;
         display: flex;
         align-items: center;
@@ -119,11 +231,12 @@ main {
 
     // 公司沿革
     #history {
+        padding: 0 300px;
+
         .content {
             width: calc(100vw -17px);
 
             .card {
-
                 display: flex;
                 width: 50%;
                 flex-wrap: wrap;
@@ -142,6 +255,7 @@ main {
 
     // 公司沿革圖
     #history-img {
+
         height: 65vh;
         display: flex;
         align-items: center;
@@ -154,10 +268,12 @@ main {
     }
 
     // 公司簡介
-    #companyProfile {
+    #company-profile {
+        padding: 0 300px;
+
         .content {
             .card {
-                .companyName {
+                .company-name {
                     &::before {
                         content: '公司名稱';
                         display: inline-block;
@@ -174,7 +290,7 @@ main {
                     }
                 }
 
-                .buildData {
+                .build-data {
                     &::before {
                         content: '設立時間';
                         display: inline-block;
@@ -210,7 +326,7 @@ main {
 
                 }
 
-                .openingHours {
+                .opening-hours {
                     &::before {
                         content: '營業時間';
                         display: inline-block;
@@ -246,7 +362,7 @@ main {
 
                 }
 
-                .serviceItems {
+                .service-items {
                     display: flex;
                     border-bottom: 1px solid black;
                     padding-bottom: 50px;
@@ -274,7 +390,18 @@ main {
     }
 
     // 公司地圖
-    #locationMap {}
+    #location-map {
+        padding-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        iframe {
+            width: 70vw;
+            height: 400px;
+        }
+    }
 
 
 }
