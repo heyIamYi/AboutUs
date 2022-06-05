@@ -24,7 +24,7 @@ main {
         }
 
         @include screen1200 {
-            padding-left: 100px;
+            padding-left: 50px;
         }
 
         @include pad {
@@ -47,11 +47,16 @@ main {
 
                     @include pad {
                         position: absolute;
-                        margin-top: 10%;
                         color: white;
+                        margin-top: 10%;
                         margin-left: 5%;
                         margin-top: 5%;
                     }
+
+                    @include screen500 {
+                        line-height: 100px;
+                    }
+
                 }
 
                 .tittle-ch {
@@ -67,6 +72,11 @@ main {
                         color: white;
                         margin-left: 5%;
                         margin-top: 25%;
+                    }
+
+                    @include screen500 {
+                        margin-top: 250px;
+
                     }
                 }
 
@@ -258,8 +268,19 @@ main {
 
     // 經營理念
     #philosophy {
-        padding: 0 428px 0 393px;
+        padding: 0 428px 0 20%;
         margin-top: 305px;
+
+        @include screen1500 {
+            margin-top: 180px;
+            padding-left: 240px;
+            padding-right: 155px;
+        }
+
+        @include pad {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
 
         .philosophy-container {
             display: flex;
@@ -267,13 +288,23 @@ main {
             // 左區塊
             .left-section {
                 margin-right: 187px;
+                min-width: 160px;
+
+                @include pad {
+                    margin-right: 130px;
+                }
+
+                @include mobile {
+                    display: none;
+                }
 
                 .white-space {
                     margin-right: 100px;
                     display: flex;
 
                     h1 {
-                        writing-mode: sideways-lr;
+                        writing-mode: vertical-lr;
+                        transform: rotate(-180deg);
                         orientation: mixed;
                         @include bgTextSet;
                     }
@@ -298,6 +329,10 @@ main {
 
                         p {
                             @include contentFont;
+
+                            @include screen1500 {
+                                margin-bottom: 65px;
+                            }
                         }
 
                         .text {
@@ -356,19 +391,61 @@ main {
             height: 65vh;
             display: flex;
             align-items: center;
+            position: relative;
 
             .bg-color {
                 width: 100%;
                 height: 50%;
                 background-color: #ECF4FF;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .img-box {
+                width: 100%;
+                padding-left: 50%;
+                .bg-image1 {
+                    width: 551px;
+                    height: 526px;
+                    transform: translate(-50%);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .bg-image2 {
+                    width: 492px;
+                    height: 311px;
+                    transform: translate(-50%);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
             }
         }
+
     }
 
     // 公司沿革
     #milestones {
-        padding: 0 428px 0 393px;
+        padding: 0 428px 0 20%;
         margin-top: 305px;
+
+        @include screen1500 {
+            margin-top: 180px;
+            padding-left: 240px;
+            padding-right: 155px;
+        }
+
+        @include pad {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
 
         .milestones-container {
             display: flex;
@@ -376,13 +453,23 @@ main {
             // 左區塊
             .left-section {
                 margin-right: 187px;
+                min-width: 160px;
+
+                @include pad {
+                    margin-right: 130px;
+                }
+
+                @include mobile {
+                    display: none;
+                }
 
                 .white-space {
                     margin-right: 100px;
                     display: flex;
 
                     h1 {
-                        writing-mode: sideways-lr;
+                        writing-mode: vertical-lr;
+                        transform: rotate(-180deg);
                         orientation: mixed;
                         @include bgTextSet
                     }
@@ -433,20 +520,61 @@ main {
             height: 65vh;
             display: flex;
             align-items: center;
+            position: relative;
 
             .bg-color {
                 width: 100%;
                 height: 50%;
                 background-color: #ECF4FF;
+                float: left;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .img-box {
+                width: 100%;
+
+                .bg-image1 {
+                    width: 551px;
+                    height: 526px;
+                    transform: translate(-50%);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .bg-image2 {
+                    width: 492px;
+                    height: 311px;
+                    transform: translate(-50%);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
             }
         }
     }
 
     // 公司簡介
     #company-profile {
-        padding: 0 428px 0 393px;
+        padding: 0 428px 0 20%;
         margin-top: 305px;
 
+        @include screen1500 {
+            margin-top: 180px;
+            padding-left: 240px;
+            padding-right: 155px;
+        }
+
+        @include pad {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
 
         .company-profile-container {
             display: flex;
@@ -454,13 +582,23 @@ main {
             // 左區塊
             .left-section {
                 margin-right: 187px;
+                min-width: 160px;
+
+                @include pad {
+                    margin-right: 130px;
+                }
+
+                @include mobile {
+                    display: none;
+                }
 
                 .white-space {
                     margin-right: 100px;
                     display: flex;
 
                     h1 {
-                        writing-mode: sideways-lr;
+                        writing-mode: vertical-lr;
+                        transform: rotate(-180deg);
                         orientation: mixed;
                         @include bgTextSet;
                     }
@@ -470,6 +608,8 @@ main {
             // 右區塊
             .right-section {
                 padding-top: 50px;
+                width: 100%;
+                height: auto;
 
                 .main-container {
                     .tittle {
@@ -479,100 +619,93 @@ main {
                     }
 
                     .content {
+                        width: calc(100vw -17px);
+                        margin-top: 15px;
+
                         .card {
-                            .company-name {
+                            width: 100%;
+                            margin-top: 60px;
+                            display: flex;
+                            padding-bottom: 60px;
+                            border-bottom: 1px solid #6F8BB7;
+
+                            .name-field {
                                 &::before {
                                     content: '公司名稱';
                                     display: inline-block;
-                                    width: auto;
-                                    height: auto;
-                                }
-
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 1px;
-                                    background-color: black;
+                                    color: #6F8BB7;
+                                    min-width: 64px;
                                 }
                             }
 
-                            .build-data {
+                            .company-name {
+                                margin-left: 60px;
+                            }
+
+                            .build-field {
                                 &::before {
                                     content: '設立時間';
                                     display: inline-block;
-                                    width: auto;
-                                    height: auto;
+                                    min-width: 64px;
+                                    color: #6F8BB7;
                                 }
+                            }
 
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 1px;
-                                    background-color: black;
+                            .build-date {
+                                margin-left: 60px;
+                            }
+
+                            .address-field {
+                                &::before {
+                                    content: '地址　　';
+                                    display: inline-block;
+                                    min-width: 64px;
+                                    color: #6F8BB7;
                                 }
-
                             }
 
                             .address {
-                                &::before {
-                                    content: '地址';
-                                    display: inline-block;
-                                    width: auto;
-                                    height: auto;
-                                }
-
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 1px;
-                                    background-color: black;
-                                }
-
+                                margin-left: 60px;
                             }
 
-                            .opening-hours {
+                            .opening-field {
                                 &::before {
                                     content: '營業時間';
                                     display: inline-block;
-                                    width: auto;
-                                    height: auto;
+                                    min-width: 64px;
+                                    color: #6F8BB7;
                                 }
-
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 1px;
-                                    background-color: black;
-                                }
-
                             }
 
-                            .tel {
+                            .opening-hours {
+                                margin-left: 60px;
+                            }
+
+                            .tel-field {
                                 &::before {
                                     content: '聯絡電話';
                                     display: inline-block;
-                                    width: auto;
-                                    height: auto;
+                                    min-width: 64px;
+                                    color: #6F8BB7;
                                 }
+                            }
 
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 100%;
-                                    height: 1px;
-                                    background-color: black;
+                            .tel {
+                                margin-left: 60px;
+                            }
+
+                            .items-field {
+                                &::before {
+                                    content: '服務項目';
+                                    display: inline-block;
+                                    min-width: 64px;
+                                    color: #6F8BB7;
                                 }
-
                             }
 
                             .service-items {
                                 display: flex;
-                                border-bottom: 1px solid black;
-                                padding-bottom: 50px;
+                                margin-left: 60px;
 
                                 ul {
                                     display: inline;
@@ -583,12 +716,7 @@ main {
                                     }
                                 }
 
-                                &::before {
-                                    content: '服務項目';
-                                    display: inline-block;
-                                    width: auto;
-                                    height: auto;
-                                }
+
 
 
                             }
@@ -598,19 +726,19 @@ main {
             }
         }
 
-        // 公司地圖
-        #location-map {
-            padding-top: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 40px;
-
-            iframe {
-                width: 70vw;
-                height: 400px;
-            }
-        }
     }
 
+    // 公司地圖
+    #location-map {
+        padding-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        iframe {
+            width: 70vw;
+            height: 50vh;
+        }
+    }
 }
