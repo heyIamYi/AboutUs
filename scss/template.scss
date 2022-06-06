@@ -79,7 +79,7 @@ line-height: 44px;
 }
 
 @mixin screen500 {
-    @media (max-width:526px) {
+    @media (max-width:546px) {
         @content;
     }
 }
