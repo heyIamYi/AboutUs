@@ -1,0 +1,114 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main #page-tittle .tittle {
+  color: blue;
+}
+
+main #form-report {
+  background-color: #F7F8FA;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+main #form-report .content .content-tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 15px;
+  padding-top: 50px;
+}
+
+main #form-report .content .content-tittle .type {
+  width: 180px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+main #form-report .content .content-tittle .name {
+  width: 180px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+main #form-report .content .content-tittle .email {
+  width: 428px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+main #form-report .content .content-tittle .state {
+  width: 207px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+main #form-report .content .content-tittle .comment-date {
+  width: 207px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+main #form-report .content .box {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 50px;
+  margin-top: 35px;
+}
+
+main #form-report .content .box .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  height: 121px;
+  background-color: white;
+}
+
+main #form-report .content .box .container input {
+  width: 100%;
+  height: 100%;
+}
+
+main #form-report .content .box .container .box1 {
+  background-color: aqua;
+  width: 180px;
+  height: 42px;
+  margin-right: 15px;
+}
+
+main #form-report .content .box .container .box2 {
+  background-color: red;
+  width: 428px;
+  height: 42px;
+  margin-right: 15px;
+}
+
+main #form-report .content .box .container .box3 {
+  background-color: aquamarine;
+  width: 207px;
+  height: 42px;
+  margin-right: 15px;
+}
