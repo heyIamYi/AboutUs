@@ -293,18 +293,109 @@ main #banner .banner-container .main-section .banner-img .progress-bar ul li {
   margin-bottom: 16px;
 }
 
+main #banner .banner-container .main-section .banner-img .progress-bar-l {
+  width: 280px;
+  height: auto;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1600px) {
+  main #banner .banner-container .main-section .banner-img .progress-bar-l {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  main #banner .banner-container .main-section .banner-img .progress-bar-l {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step1 {
+  color: red;
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step1::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  display: block;
+  margin: 3px 0px auto;
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step2::before {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: black;
+  display: block;
+  margin: 10px auto;
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step3::before {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: black;
+  display: block;
+  margin: 10px auto;
+}
+
 main #contact-id {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 150px;
+  padding-left: 316px;
 }
 
-main #contact-id .progress-bar {
+@media (max-width: 1600px) {
+  main #contact-id {
+    padding-left: 280px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 1440px) {
+  main #contact-id {
+    padding-left: 153px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main #contact-id {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  main #contact-id {
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main #contact-id .progress-bar-l {
   width: 280px;
   height: auto;
   display: -webkit-box;
@@ -319,24 +410,23 @@ main #contact-id .progress-bar {
           align-items: center;
 }
 
-main #contact-id .progress-bar .progress-step1 {
-  color: #F5D5C4;
+@media (max-width: 1600px) {
+  main #contact-id .progress-bar-l {
+    width: 150px;
+  }
 }
 
-main #contact-id .progress-bar .progress-step1::after {
-  content: '';
-  width: 1px;
-  height: 50px;
-  background-color: #F5D5C4;
-  display: block;
-  margin: 10px auto;
+@media (max-width: 992px) {
+  main #contact-id .progress-bar-l {
+    display: none;
+  }
 }
 
-main #contact-id .progress-bar .progress-step2 {
+main #contact-id .progress-bar-l .progress-step1 {
   color: red;
 }
 
-main #contact-id .progress-bar .progress-step2::after {
+main #contact-id .progress-bar-l .progress-step1::after {
   content: '';
   width: 100%;
   height: 1px;
@@ -345,13 +435,80 @@ main #contact-id .progress-bar .progress-step2::after {
   margin: 3px 0px auto;
 }
 
-main #contact-id .progress-bar .progress-step3::before {
+main #contact-id .progress-bar-l .progress-step2::before {
   content: '';
   width: 1px;
   height: 50px;
   background-color: black;
   display: block;
   margin: 10px auto;
+}
+
+main #contact-id .progress-bar-l .progress-step3::before {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: black;
+  display: block;
+  margin: 10px auto;
+}
+
+main #contact-id .progress-bar-t {
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  main #contact-id .progress-bar-t {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  main #contact-id .progress-bar-t {
+    display: none;
+  }
+}
+
+main #contact-id .progress-bar-t .progress-step1 {
+  color: #F5D5C4;
+}
+
+main #contact-id .progress-bar-t .line {
+  width: 50px;
+  height: 1px;
+  background-color: #F5D5C4;
+  margin: 0 10px;
+}
+
+main #contact-id .progress-bar-t .progress-step2 {
+  color: red;
+}
+
+main #contact-id .progress-bar-t .progress-step2::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  display: block;
+}
+
+main #contact-id .progress-bar-t .progress-step2::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: black;
 }
 
 main #contact-id .form-container {
@@ -386,6 +543,15 @@ main #contact-id .form-container form .form-section .form-field {
       flex-wrap: nowrap;
   margin-bottom: 50px;
   border: none;
+}
+
+@media (max-width: 768px) {
+  main #contact-id .form-container form .form-section .form-field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main #contact-id .form-container form .form-section .form-field input {
