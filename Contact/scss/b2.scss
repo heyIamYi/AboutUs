@@ -276,6 +276,20 @@ main {
                         }
 
                         .progress-step1 {
+                            color: #F5D5C4;
+
+                            &::after {
+                                content: '';
+                                width: 1px;
+                                height: 50px;
+                                background-color: #F5D5C4;
+                                display: block;
+                                margin: 10px auto;
+                            }
+
+                        }
+
+                        .progress-step2 {
                             color: red;
 
                             &::after {
@@ -288,18 +302,8 @@ main {
                             }
                         }
 
-                        .progress-step2 {
-                            &::before {
-                                content: '';
-                                width: 1px;
-                                height: 50px;
-                                background-color: black;
-                                display: block;
-                                margin: 10px auto;
-                            }
-                        }
-
                         .progress-step3 {
+
                             &::before {
                                 content: '';
                                 width: 1px;
@@ -358,6 +362,20 @@ main {
             }
 
             .progress-step1 {
+                color: #F5D5C4;
+
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: 50px;
+                    background-color: #F5D5C4;
+                    display: block;
+                    margin: 10px auto;
+                }
+
+            }
+
+            .progress-step2 {
                 color: red;
 
                 &::after {
@@ -370,18 +388,8 @@ main {
                 }
             }
 
-            .progress-step2 {
-                &::before {
-                    content: '';
-                    width: 1px;
-                    height: 50px;
-                    background-color: black;
-                    display: block;
-                    margin: 10px auto;
-                }
-            }
-
             .progress-step3 {
+
                 &::before {
                     content: '';
                     width: 1px;
@@ -424,6 +432,7 @@ main {
 
             .progress-step2 {
                 color: red;
+
                 &::after {
                     content: '';
                     width: 100%;
@@ -431,6 +440,7 @@ main {
                     background-color: red;
                     display: block;
                 }
+
                 &::before {
                     content: '';
                     width: 100%;
@@ -439,17 +449,25 @@ main {
                 }
             }
 
-            .progress-step3 {}
+            .progress-step3 {
+                color: black;
+            }
         }
 
 
         // 表單區塊
         .form-container {
             margin-top: 50px;
-
+            @include pad{
+                padding-left: 50px;
+            }
+            @include mobile{
+                padding-left: 0;
+            }
             // 說明文字
             .directions {
                 margin-bottom: 60px;
+
                 h5 {
                     font-weight: 500;
                 }
@@ -459,28 +477,45 @@ main {
             form {
                 .form-section {
                     .form-field {
-                        width: 50vw;
+                        width: 100%;
+                        min-width: 679px;
                         height: auto;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        flex-direction: row;
                         flex-wrap: nowrap;
                         margin-bottom: 50px;
                         border: none;
-                        @include mobile{
-                            flex-direction: column;
+
+                        label {
+                            margin-right: 30px;
+
                         }
+
+
+                        @include mobile {
+                            flex-direction: column;
+                            min-width: unset;
+                        }
+
                         input {
                             height: 65px;
                             width: 679px;
                             @include f-field;
+
+                            @include mobile {
+                                width: 100%;
+                            }
                         }
 
                         select {
                             height: 65px;
                             width: 679px;
                             @include f-field;
+
+                            @include mobile {
+                                width: 100%;
+                            }
                         }
 
                         textarea {
@@ -488,6 +523,10 @@ main {
                             height: 282px;
                             resize: none;
                             @include f-field;
+
+                            @include mobile {
+                                width: 100%;
+                            }
                         }
                     }
                 }

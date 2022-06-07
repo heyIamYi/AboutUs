@@ -10,6 +10,7 @@
 
 
 main {
+
     // Banner大圖
     #banner {
         padding-left: 316px;
@@ -275,6 +276,34 @@ main {
                         }
 
                         .progress-step1 {
+                            color: #F5D5C4;
+
+                            &::after {
+                                content: '';
+                                width: 1px;
+                                height: 50px;
+                                background-color: #F5D5C4;
+                                display: block;
+                                margin: 10px auto;
+                            }
+                        }
+
+                        .progress-step2 {
+                            color: #F5D5C4;
+
+                            &::after {
+                                content: '';
+                                width: 1px;
+                                height: 50px;
+                                background-color: #F5D5C4;
+                                display: block;
+                                margin: 10px auto;
+                            }
+
+
+                        }
+
+                        .progress-step3 {
                             color: red;
 
                             &::after {
@@ -284,28 +313,6 @@ main {
                                 background-color: red;
                                 display: block;
                                 margin: 3px 0px auto;
-                            }
-                        }
-
-                        .progress-step2 {
-                            &::before {
-                                content: '';
-                                width: 1px;
-                                height: 50px;
-                                background-color: black;
-                                display: block;
-                                margin: 10px auto;
-                            }
-                        }
-
-                        .progress-step3 {
-                            &::before {
-                                content: '';
-                                width: 1px;
-                                height: 50px;
-                                background-color: black;
-                                display: block;
-                                margin: 10px auto;
                             }
                         }
                     }
@@ -357,6 +364,34 @@ main {
             }
 
             .progress-step1 {
+                color: #F5D5C4;
+
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: 50px;
+                    background-color: #F5D5C4;
+                    display: block;
+                    margin: 10px auto;
+                }
+            }
+
+            .progress-step2 {
+                color: #F5D5C4;
+
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: 50px;
+                    background-color: #F5D5C4;
+                    display: block;
+                    margin: 10px auto;
+                }
+
+
+            }
+
+            .progress-step3 {
                 color: red;
 
                 &::after {
@@ -366,28 +401,6 @@ main {
                     background-color: red;
                     display: block;
                     margin: 3px 0px auto;
-                }
-            }
-
-            .progress-step2 {
-                &::before {
-                    content: '';
-                    width: 1px;
-                    height: 50px;
-                    background-color: black;
-                    display: block;
-                    margin: 10px auto;
-                }
-            }
-
-            .progress-step3 {
-                &::before {
-                    content: '';
-                    width: 1px;
-                    height: 50px;
-                    background-color: black;
-                    display: block;
-                    margin: 10px auto;
                 }
             }
         }
@@ -423,6 +436,7 @@ main {
 
             .progress-step2 {
                 color: #F5D5C4;
+
                 &::before {
                     content: '';
                     width: 100%;
@@ -449,6 +463,11 @@ main {
             margin-top: 50px;
             width: 40%;
 
+            @include pad{
+                width: 100%;
+                text-align: center;
+            }
+
             // 說明文字
             .directions {
                 margin-bottom: 60px;
@@ -467,6 +486,9 @@ main {
                 background-color: white;
                 border: 1px solid $themeColor;
                 border-radius: 5px;
+                @include pad{
+                    width: 40%;
+                }
 
                 &:hover {
                     cursor: pointer;

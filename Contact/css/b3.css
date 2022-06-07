@@ -324,34 +324,42 @@ main #banner .banner-container .main-section .banner-img .progress-bar-l {
 }
 
 main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step1 {
-  color: red;
+  color: #F5D5C4;
 }
 
 main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step1::after {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: #F5D5C4;
+  display: block;
+  margin: 10px auto;
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step2 {
+  color: #F5D5C4;
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step2::after {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: #F5D5C4;
+  display: block;
+  margin: 10px auto;
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step3 {
+  color: red;
+}
+
+main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step3::after {
   content: '';
   width: 100%;
   height: 1px;
   background-color: red;
   display: block;
   margin: 3px 0px auto;
-}
-
-main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step2::before {
-  content: '';
-  width: 1px;
-  height: 50px;
-  background-color: black;
-  display: block;
-  margin: 10px auto;
-}
-
-main #banner .banner-container .main-section .banner-img .progress-bar-l .progress-step3::before {
-  content: '';
-  width: 1px;
-  height: 50px;
-  background-color: black;
-  display: block;
-  margin: 10px auto;
 }
 
 main #contact-id {
@@ -423,34 +431,42 @@ main #contact-id .progress-bar-l {
 }
 
 main #contact-id .progress-bar-l .progress-step1 {
-  color: red;
+  color: #F5D5C4;
 }
 
 main #contact-id .progress-bar-l .progress-step1::after {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: #F5D5C4;
+  display: block;
+  margin: 10px auto;
+}
+
+main #contact-id .progress-bar-l .progress-step2 {
+  color: #F5D5C4;
+}
+
+main #contact-id .progress-bar-l .progress-step2::after {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: #F5D5C4;
+  display: block;
+  margin: 10px auto;
+}
+
+main #contact-id .progress-bar-l .progress-step3 {
+  color: red;
+}
+
+main #contact-id .progress-bar-l .progress-step3::after {
   content: '';
   width: 100%;
   height: 1px;
   background-color: red;
   display: block;
   margin: 3px 0px auto;
-}
-
-main #contact-id .progress-bar-l .progress-step2::before {
-  content: '';
-  width: 1px;
-  height: 50px;
-  background-color: black;
-  display: block;
-  margin: 10px auto;
-}
-
-main #contact-id .progress-bar-l .progress-step3::before {
-  content: '';
-  width: 1px;
-  height: 50px;
-  background-color: black;
-  display: block;
-  margin: 10px auto;
 }
 
 main #contact-id .progress-bar-t {
@@ -520,6 +536,13 @@ main #contact-id .form-container {
   width: 40%;
 }
 
+@media (max-width: 992px) {
+  main #contact-id .form-container {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 main #contact-id .form-container .directions {
   margin-bottom: 60px;
 }
@@ -536,6 +559,12 @@ main #contact-id .form-container button {
   background-color: white;
   border: 1px solid #004098;
   border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+  main #contact-id .form-container button {
+    width: 40%;
+  }
 }
 
 main #contact-id .form-container button:hover {

@@ -439,14 +439,21 @@ main {
                 }
             }
 
-            .progress-step3 {}
+            .progress-step3 {
+                color: black;
+            }
         }
 
 
         // 表單區塊
         .form-container {
             margin-top: 50px;
-
+            @include pad{
+                padding-left: 50px;
+            }
+            @include mobile{
+                padding-left: 0;
+            }
             // 說明文字
             .directions {
                 margin-bottom: 60px;
@@ -470,19 +477,35 @@ main {
                         margin-bottom: 50px;
                         border: none;
 
-                        @include mobile{
-                            flex-direction: column;
+                        label {
+                            margin-right: 30px;
+
                         }
+
+
+                        @include mobile {
+                            flex-direction: column;
+                            min-width: unset;
+                        }
+
                         input {
                             height: 65px;
                             width: 679px;
                             @include f-field;
+
+                            @include mobile {
+                                width: 100%;
+                            }
                         }
 
                         select {
                             height: 65px;
                             width: 679px;
                             @include f-field;
+
+                            @include mobile {
+                                width: 100%;
+                            }
                         }
 
                         textarea {
@@ -490,6 +513,10 @@ main {
                             height: 282px;
                             resize: none;
                             @include f-field;
+
+                            @include mobile {
+                                width: 100%;
+                            }
                         }
                     }
                 }
