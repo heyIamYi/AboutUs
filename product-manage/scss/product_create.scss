@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F7F8FA;
+}
 
 // 導覽列
 // 頁面內容
@@ -39,6 +42,18 @@ main {
 
             background-color: #F7F8FA;
             padding: 25px 0px 50px;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 70%;
+                height: 2px;
+                background-color: #004098;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
 
             .field-section {
                 display: flex;
@@ -86,20 +101,38 @@ main {
                         justify-content: center;
                     }
 
-                    .field-button {
+                    .field-date {
                         width: 150px;
                         height: 50px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                     }
+
+                    .field-btn {
+                        width: 100px;
+                        height: 0px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                    }
                 }
             }
 
             .content-section {
+                margin-bottom: 30px;
                 display: flex;
                 justify-content: center;
-                margin-bottom: 30px;
+
+                &:nth-last-child(1) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 0;
+                    padding-bottom: 30px;
+                }
+
                 form {
                     display: flex;
                     justify-content: center;
@@ -116,6 +149,7 @@ main {
                         // background-color: gainsboro;
                         padding: 20px;
                         margin-right: 50px;
+
                         img {
                             background-color: gray;
                             width: 100%;
@@ -123,15 +157,6 @@ main {
                         }
                     }
 
-                    // 產品名稱
-                    .product-name {
-                        width: 111px;
-                        height: 42px;
-                        border-radius: 5px;
-                        input{
-                            width: 100%;
-                        }
-                    }
 
                     // 排序
                     .image-gradation {
@@ -139,19 +164,94 @@ main {
                         height: 42px;
                     }
 
-                    // 主打產品
-                    .produt-star {
-                        width: 220px;
-                        height: 42px;
-                    }
 
-                    // 功能按鈕
-                    .function-button {
+                    // 新增日期
+                    .date-bulid {
                         width: 150px;
                         height: 42px;
 
+                        input {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+
+                    // 新增按鈕
+                    .bulid-btn {
+                        width: 100px;
+                        height: 42px;
+
                         button {
-                            margin-right: 15px;
+                            background-color: #226b00;
+                        }
+                    }
+                }
+            }
+        }
+
+        #formto {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 25px 0px;
+            .form-input {
+                margin: 50px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input {
+                    width: 70%;
+                    font-size: 32px;
+                    border: unset;
+                    background-color: white;
+                    border-radius: 0;
+                }
+            }
+
+            // 主打商品
+            .star-items {
+                display: flex;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 70%;
+
+                    li {
+                        height: 30px;
+                        display: flex;
+                        list-style-type: none;
+                    }
+
+                    input {
+                        display: inline-block;
+                        width: unset;
+                    }
+
+                    label {
+                        margin: auto 0;
+                    }
+                }
+            }
+
+
+            .btn {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    width: 56px;
+                    height: 26px;
+                    border-radius: 13px;
+                    border: unset;
+                    margin: 0 10px;
+
+                    &:nth-child(1) {
+                        background-color: #2C8900;
+                        color: white;
+
+                        &:hover {
+                            background-color: #226b00;
                         }
                     }
                 }
