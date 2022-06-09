@@ -399,8 +399,12 @@ main {
             align-items: center;
             position: relative;
 
-            @include mobile {
+            @include pad{
                 margin-top: 100px;
+            }
+
+            @include mobile {
+                margin-top: 50px;
                 height: auto;
                 // width: calc(100vw - 17px);
             }
@@ -478,17 +482,16 @@ main {
                         display: none;
                         width: 100%;
                         transform: unset;
-                        height: 100%;
                         transform: unset;
                         max-width: unset;
                         min-width: unset;
+                        min-height: 411px;
                     }
 
                     img {
                         width: 100%;
+                        object-fit: cover;
                         height: 100%;
-
-
                     }
                 }
             }
@@ -511,6 +514,8 @@ main {
         @include pad {
             padding-right: 40px;
             padding-left: 40px;
+            margin-top: 30px;
+        margin-bottom: 50px;
         }
 
         .milestones-container {
@@ -588,6 +593,12 @@ main {
             align-items: center;
             position: relative;
 
+            @include mobile {
+                margin-top: 100px;
+                height: auto;
+                // width: calc(100vw - 17px);
+            }
+
             .bg-color {
                 width: 100%;
                 height: 50%;
@@ -613,11 +624,10 @@ main {
                 @include mobile {
                     width: 100%;
                     display: block;
-                    height: 100%;
                     padding-right: unset;
                 }
 
-                .bg-image1 {
+                .bg-image3 {
                     max-width: 517px;
                     height: 331px;
                     transform: translate(32px);
@@ -625,32 +635,35 @@ main {
                     @include mobile {
                         width: 100%;
                         max-width: unset;
+                        min-height: 411px;
                         transform: unset;
-                        height: 100%;
                     }
 
                     img {
                         width: 100%;
+                        object-fit: cover;
                         height: 100%;
                     }
                 }
 
-                .bg-image2 {
+                .bg-image4 {
                     width: 485px;
                     height: 634px;
+
 
                     @include mobile {
                         display: none;
                         width: 100%;
                         transform: unset;
-                        height: 100%;
-                        transform: unset;
+                        max-width: unset;
+                        min-height: 411px;
+                        max-height: 411px;
                     }
 
                     img {
+                        object-fit: cover;
                         width: 100%;
                         height: 100%;
-
                     }
                 }
             }
@@ -671,6 +684,7 @@ main {
         @include pad {
             padding-right: 40px;
             padding-left: 40px;
+            margin-top: 50px;
         }
 
         .company-profile-container {
@@ -835,7 +849,7 @@ main {
             height: 50vh;
 
             @include pad {
-                width:100%;
+                width: 100%;
             }
         }
     }
