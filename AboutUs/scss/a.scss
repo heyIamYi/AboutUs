@@ -275,10 +275,10 @@ main {
     // 經營理念
     #philosophy {
         padding: 0 428px 0 20%;
-        margin-top: 305px;
-
+        margin-top: 120px;
+        margin-bottom: 100px;
         @include screen1500 {
-            margin-top: 180px;
+            margin-top: 120px;
             padding-left: 240px;
             padding-right: 155px;
         }

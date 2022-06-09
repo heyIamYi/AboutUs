@@ -306,12 +306,13 @@ main #banner .banner-container .main-section .banner-img .page-list ul li {
 
 main #philosophy {
   padding: 0 428px 0 20%;
-  margin-top: 305px;
+  margin-top: 120px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 1500px) {
   main #philosophy {
-    margin-top: 180px;
+    margin-top: 120px;
     padding-left: 240px;
     padding-right: 155px;
   }
