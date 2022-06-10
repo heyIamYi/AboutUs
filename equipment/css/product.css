@@ -768,9 +768,7 @@ body main #product-container #maintenance-section .maintenance-content .right-se
 
 body main #product-container #maintenance-section .maintenance-content .right-section .main-section .tittle-box .more-box {
   color: #C7000B;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -802,9 +800,23 @@ body main #product-container #maintenance-section .maintenance-content .right-se
   display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
+  width: calc(431px * 2 + 50px);
+}
+
+@media (max-width: 1200px) {
+  body main #product-container #maintenance-section .maintenance-content .right-section .main-section .content {
+    width: calc(431px + 50px);
+  }
+}
+
+@media (max-width: 768px) {
+  body main #product-container #maintenance-section .maintenance-content .right-section .main-section .content {
+    width: 431px;
+  }
 }
 
 body main #product-container #maintenance-section .maintenance-content .right-section .main-section .content .product-content {
+  display: none;
   position: relative;
   width: 50%;
   max-width: 431px;
