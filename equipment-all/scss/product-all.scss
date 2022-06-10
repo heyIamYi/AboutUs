@@ -1,0 +1,224 @@
+@import "./_template.scss";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    main {
+        #product-single {
+            padding-top: 150px;
+
+            // 商品區塊
+            #product-section {
+                width: auto;
+                margin-bottom: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 400px;
+
+                @include screen1600 {
+                    padding-left: 300px;
+                }
+
+                @include screen1500 {
+                    padding-left: 250px;
+                }
+
+                @include screen1440 {
+                    padding-left: 162px;
+                }
+
+                @include screen1350 {
+                    padding-left: 80px;
+                }
+
+                @include screen1200 {
+                    padding-left: 50px;
+                }
+
+
+                // 區塊內容
+                .product-content {
+                    display: flex;
+                    width: auto;
+                    justify-content: center;
+
+                    // 背景文字
+                    .left-section {
+                        margin-right: 140px;
+
+                        @include screen1600 {
+                            margin-right: 130px;
+                        }
+
+                        @include screen1440 {
+                            margin-right: 120px;
+                        }
+
+                        @include screen1350 {
+                            margin-right: 80px;
+                        }
+
+                        @include screen1200 {
+                            margin-right: 50px;
+                        }
+
+                        .white-space {
+                            h1 {
+                                @include bgTextSet;
+                            }
+                        }
+                    }
+
+                }
+
+                // 主要內容區塊
+                .right-section {
+                    .main-section {
+
+                        // 標題區塊
+                        .tittle-box {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .tittle-text {
+                                @include p-blue-font;
+                            }
+
+                            @include pad {
+                                display: none;
+                            }
+                        }
+
+                        // 內容區塊
+                        .content {
+                            display: flex;
+                            margin-top: 50px;
+
+                            // 該項目的商品圖片
+                            .product-items {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                @include pad{
+                                    display: none;
+                                }
+                                // 商品
+                                .item-content {
+                                    position: relative;
+                                    background-color: #ebebeb;
+                                    width: 434px;
+                                    height: 566px;
+                                    margin-bottom: 150px;
+                                    margin-right: 50px;
+
+                                    // 圖片
+                                    .image-box {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    // 文字說明
+                                    .product-directions {
+                                        position: absolute;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translate(-50%, 75%);
+                                        text-align: center;
+
+                                        .product-name {
+                                            h3 {
+                                                font-weight: 400;
+                                            }
+                                        }
+
+                                        .product-number {
+                                            p {
+                                                color: grey;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            // 該項目商品的swiper
+                            .product-swiper {
+                                position: relative;
+                                width: 400px;
+                                height: 500px;
+                                display: none;
+
+                                @include pad {
+                                    display: block;
+                                }
+
+                                .swiper {
+                                    width: 100%;
+                                    height: 100%;
+
+                                    .swiper-slide {
+                                        text-align: center;
+                                        font-size: 18px;
+                                        background: #fff;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        img {
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    // 調整數字
+
+                                    .swiper-pagination {
+                                        // top: 0;
+                                        bottom: unset;
+                                        top: 0;
+                                        right: 0;
+                                        left: unset;
+                                        width: 100px;
+                                    }
+
+                                    .tittle {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 2;
+                                        @include p-blue-font;
+
+                                        h3 {
+                                            font-weight: 400;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+}
