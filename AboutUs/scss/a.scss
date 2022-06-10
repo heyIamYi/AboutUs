@@ -309,9 +309,6 @@ main {
                     display: flex;
 
                     h1 {
-                        writing-mode: vertical-lr;
-                        transform: rotate(-180deg);
-                        orientation: mixed;
                         @include bgTextSet;
                     }
                 }

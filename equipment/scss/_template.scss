@@ -1,17 +1,27 @@
 $themeColor:#004098;
+$SupColor:#C7000B;
 $bgTextColor:#EAEEF3;
 @mixin textArea {
     margin-bottom: 40px;
 }
 
+// product專區
+@mixin p-blue-font{
+    color: $themeColor;
+}
+@mixin p-red-font {
+    color:$SupColor;
+}
+
+
 // 背景文字
 @mixin bgTextSet{
-    font-size: 60px;
-    color:#EAEEF3;
-    line-height: 5rem;
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     orientation: mixed;
+    font-size: 60px;
+    color:#EAEEF3;
+    line-height: 5rem;
 }
 
 // 藍字標題
@@ -35,6 +45,13 @@ line-height: 44px;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.06em;
+}
+
+// 表單顏色
+@mixin f-field {
+    border: none;
+    border-radius: 0;
+    background-color: #F3F6FA;
 }
 
 
