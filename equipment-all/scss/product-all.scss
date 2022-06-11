@@ -20,14 +20,14 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding-left: 400px;
+                padding-left: 380px;
 
                 @include screen1600 {
-                    padding-left: 300px;
+                    padding-left: 280px;
                 }
 
                 @include screen1500 {
-                    padding-left: 250px;
+                    padding-left: 220px;
                 }
 
                 @include screen1440 {
@@ -38,9 +38,7 @@ body {
                     padding-left: 80px;
                 }
 
-                @include screen1200 {
-                    padding-left: 50px;
-                }
+               
 
 
                 // 區塊內容
@@ -62,12 +60,9 @@ body {
                         }
 
                         @include screen1350 {
-                            margin-right: 80px;
+                            margin-right: 60px;
                         }
 
-                        @include screen1200 {
-                            margin-right: 50px;
-                        }
 
                         .white-space {
                             h1 {
@@ -107,9 +102,14 @@ body {
                                 display: flex;
                                 flex-wrap: wrap;
 
-                                @include pad{
+                               @include screen1200{
+                                justify-content: center;
+                               }
+
+                                @include pad {
                                     display: none;
                                 }
+
                                 // 商品
                                 .item-content {
                                     position: relative;
@@ -119,6 +119,9 @@ body {
                                     margin-bottom: 150px;
                                     margin-right: 50px;
 
+                                    @include screen1350{
+                                        margin-right: 45px;
+                                    }
                                     // 圖片
                                     .image-box {
                                         width: 100%;
