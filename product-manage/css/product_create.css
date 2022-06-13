@@ -9,6 +9,23 @@ body {
   background-color: #F7F8FA;
 }
 
+main .blue {
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: 500;
+  position: relative;
+}
+
+main .blue::after {
+  position: absolute;
+  bottom: -5px;
+  left: 1px;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background-color: blue;
+}
+
 main #tittle-list-id {
   background-color: white;
 }
@@ -203,7 +220,7 @@ main #tittle-list-id .list-container .content-section form {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background-color: white;
+  background-color: #f7f8fa;
   width: 1000px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -244,17 +261,18 @@ main #tittle-list-id .list-container .content-section form .bulid-btn {
   height: 42px;
 }
 
-main #tittle-list-id .list-container .content-section form .bulid-btn button {
-  background-color: #226b00;
+main #tittle-list-id form {
+  background-color: #f7f8fa;
 }
 
-main #tittle-list-id #formto {
+main #tittle-list-id form #formto {
   width: 1000px;
   margin: 0 auto;
   padding: 25px 0px;
+  background-color: #f7f8fa;
 }
 
-main #tittle-list-id #formto .form-input {
+main #tittle-list-id form #formto .form-input {
   margin: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -267,7 +285,7 @@ main #tittle-list-id #formto .form-input {
           justify-content: space-between;
 }
 
-main #tittle-list-id #formto .form-input input {
+main #tittle-list-id form #formto .form-input input {
   width: 70%;
   font-size: 32px;
   border: unset;
@@ -275,13 +293,13 @@ main #tittle-list-id #formto .form-input input {
   border-radius: 0;
 }
 
-main #tittle-list-id #formto .star-items {
+main #tittle-list-id form #formto .star-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main #tittle-list-id #formto .star-items ul {
+main #tittle-list-id form #formto .star-items ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +312,7 @@ main #tittle-list-id #formto .star-items ul {
   width: 70%;
 }
 
-main #tittle-list-id #formto .star-items ul li {
+main #tittle-list-id form #formto .star-items ul li {
   height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,16 +320,16 @@ main #tittle-list-id #formto .star-items ul li {
   list-style-type: none;
 }
 
-main #tittle-list-id #formto .star-items ul input {
+main #tittle-list-id form #formto .star-items ul input {
   display: inline-block;
   width: unset;
 }
 
-main #tittle-list-id #formto .star-items ul label {
+main #tittle-list-id form #formto .star-items ul label {
   margin: auto 0;
 }
 
-main #tittle-list-id #formto .btn {
+main #tittle-list-id form #formto .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,19 +338,11 @@ main #tittle-list-id #formto .btn {
           justify-content: center;
 }
 
-main #tittle-list-id #formto .btn button {
+main #tittle-list-id form #formto .btn button {
   width: 56px;
   height: 26px;
   border-radius: 13px;
   border: unset;
   margin: 0 10px;
 }
-
-main #tittle-list-id #formto .btn button:nth-child(1) {
-  background-color: #2C8900;
-  color: white;
-}
-
-main #tittle-list-id #formto .btn button:nth-child(1):hover {
-  background-color: #226b00;
-}
+/*# sourceMappingURL=product_create.css.map */

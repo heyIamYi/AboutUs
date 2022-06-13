@@ -9,6 +9,27 @@ body {
   background-color: #F7F8FA;
 }
 
+main .blue {
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: 500;
+  position: relative;
+}
+
+main .blue::after {
+  position: absolute;
+  bottom: -5px;
+  left: 1px;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background-color: blue;
+}
+
+main #tittle-list-id {
+  background-color: white;
+}
+
 main #tittle-list-id .list-tittle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,6 +52,9 @@ main #tittle-list-id .list-tittle ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 20px;
 }
 
 main #tittle-list-id .list-tittle ul li {
@@ -290,3 +314,4 @@ main #tittle-list-id #formto .btn button:nth-child(1) {
 main #tittle-list-id #formto .btn button:nth-child(1):hover {
   background-color: #226b00;
 }
+/*# sourceMappingURL=product_edit.css.map */
